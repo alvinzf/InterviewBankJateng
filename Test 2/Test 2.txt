@@ -1,0 +1,7 @@
+Pada test 2 diminta untuk melakukan validasi tanggal lahir yang beberapa diantarana tidak memiliki format sesuai standar. pada tes ini saya menggunakan database MySQL dengan engine InnoDB dan collation latin1_swedish_ci
+
+query yang saya gunakan adalah sebagai berikut
+SELECT IdNasabah, KodeCabang, NamaNasabah, TanggalLahir, CASE WHEN day(TanggalLahir) IS NOT NULL THEN 'true' ELSE 'false' END AS CekTanggal FROM data_nasabah;
+
+
+dan akan menghasilkan data yang sesuai dengan test_2.jpeg

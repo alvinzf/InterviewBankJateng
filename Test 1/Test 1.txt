@@ -1,0 +1,7 @@
+Pada test 1 diminta untuk menampilkan hubungan relasi cabang yang ada di database data_cabang. pada tes ini saya menggunakan database MySQL versi dengan engine InnoDB dan collation latin1_swedish_ci
+
+query yang saya gunakan adalah sebagai berikut
+
+SELECT a.nama as cabkor, b.nama as cabang, c.nama as unit_kerja FROM data_cabang a LEFT JOIN data_cabang b ON (a.id = b.induk) LEFT JOIN data_cabang c ON (b.id = c.induk) ORDER BY a.id, b.id, c.id;
+
+dan akan menghasilkan data yang sesuai dengan test_1.jpeg
